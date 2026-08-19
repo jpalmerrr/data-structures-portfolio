@@ -1,4 +1,13 @@
 title: Data Science Portfolio
-description: Documenting my learning in Data Structures
+description: Documenting my learning in Data Science
 theme: jekyll-theme-minimal
+logo: profile.png
+author: Joshua Palmer
 show_downloads: false
+github:
+  is_project_page: false
+social_links:
+  github: https://github.com/jpalmerrr
+  linkedin: www.linkedin.com/in/joshua-palmer-8504b22a7
+
+
