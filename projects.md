@@ -2,7 +2,7 @@
 This section documents my data science projects, research questions, and data stories I create throughout the semesters.
 ---
 ## Project 1
-Research Question: How does Home-Field Advantage Affect College Football (Specifically Charlotte Football)?
+Research Question: How does home-field advantage affect the performance of the Charlotte 49ers football team?
 
 Planned Data Source: College Football Data (CFBD) API - https://collegefootballdata.com/key
 
