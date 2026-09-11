@@ -8,3 +8,4 @@ How does home-field advantage affect college football (specifically Charlotte Fo
 
 Planned Data Source: College Football Data (CFBD) API - https://collegefootballdata.com/key
 
+Key Features/ Variables: I have selected for this analysis include venue designation (home vs. away records), final scores, postgame win probabilities, and opponent strength relative to Charlotte. These variables directly support the core research objective: quantifying the impact of venue on performance outcomes. By evaluating Charlotte's statistical variations across home and away environments, while adjusting for opponent quality through relative strength metrics, this dataset provides the necessary foundation to model and draw rigorous conclusions regarding home-field advantage.
