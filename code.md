@@ -24,7 +24,7 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# 1. Get Charlotte Football Game Data
+### 1. Get Charlotte Football Game Data
 
 API_KEY = "jJ3Pyhrf9pdrilfP2fCCP5l+RLSS5nJAmgMNNMZdCG7vUp92TNMeF7WyWazm3rny"
 
@@ -47,24 +47,24 @@ response = requests.get(
 
 print("Status Code:", response.status_code)
 
-# Turn API response into a pandas DataFrame
+Turn API response into a pandas DataFrame
 data = response.json()
 df = pd.DataFrame(data)
 
-# Check the data
+Check the data
 print(df.head())
 print("\nColumns:")
 print(df.columns)
 
 
-# 2. Clean the Data
-
-# Remove games that do not have final scores
+### 2. Clean the Data
+  
+###Remove games that do not have final scores
 df = df.dropna(
     subset=["homePoints", "awayPoints"]
 ).copy()
 
-# Determine whether Charlotte played Home or Away
+### Determine whether Charlotte played Home or Away
 df["Location"] = df.apply(
     lambda row: "Home"
     if row["homeTeam"] == "Charlotte"
@@ -72,7 +72,7 @@ df["Location"] = df.apply(
     axis=1
 )
 
-# Determine Charlotte's score
+### Determine Charlotte's score
 df["Charlotte Points"] = df.apply(
     lambda row: row["homePoints"]
     if row["homeTeam"] == "Charlotte"
@@ -80,7 +80,7 @@ df["Charlotte Points"] = df.apply(
     axis=1
 )
 
-# Determine opponent's score
+### Determine opponent's score
 df["Opponent Points"] = df.apply(
     lambda row: row["awayPoints"]
     if row["homeTeam"] == "Charlotte"
@@ -88,21 +88,21 @@ df["Opponent Points"] = df.apply(
     axis=1
 )
 
-# Calculate point differential
+### Calculate point differential
 df["Point Differential"] = (
     df["Charlotte Points"] -
     df["Opponent Points"]
 )
 
-# Create Win variable
-# 1 = Win
-# 0 = Loss
+### Create Win variable
+### 1 = Win
+### 0 = Loss
 df["Win"] = (
     df["Point Differential"] > 0
 ).astype(int)
 
 
-# 3. View Cleaned Data
+### 3. View Cleaned Data
 
 print("\nCleaned Data:")
 
@@ -121,8 +121,8 @@ print(
 )
 
 
-# 4. Visualization 1:
-# Home vs. Away Win Percentage
+### 4. Visualization 1:
+### Home vs. Away Win Percentage
 
 win_percentage = (
     df.groupby("Location")["Win"]
@@ -154,7 +154,7 @@ plt.ylabel(
 
 plt.ylim(0, 100)
 
-# Add percentage labels
+### Add percentage labels
 for i, value in enumerate(win_percentage.values):
     plt.text(
         i,
@@ -166,11 +166,11 @@ for i, value in enumerate(win_percentage.values):
 plt.show()
 
 
-# 5. Visualization 2:
-# Point Differential by Location
+### 5. Visualization 2:
+### Point Differential by Location
 
 
-# Calculate average point differential
+### Calculate average point differential
 point_difference = (
     df.groupby("Location")["Point Differential"]
     .mean()
@@ -199,7 +199,7 @@ plt.ylabel(
     "Average Point Differential"
 )
 
-# Add values above bars
+### Add values above bars
 for i, value in enumerate(point_difference.values):
     plt.text(
         i,
