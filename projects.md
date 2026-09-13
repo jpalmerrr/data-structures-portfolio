@@ -113,4 +113,4 @@ My research question is: **How does home-field advantage affect the performance 
 
 Click [HERE](/Users/joshpalmer/Downloads/Studio_2_Projects) to access my code for this project.
 
-Click [HERE]((https://github.com/jpalmerrr/data-structures-portfolio)) to access my GitHub for this project.
+Click [HERE](https://github.com/jpalmerrr/data-structures-portfolio) to access my GitHub for this project.
