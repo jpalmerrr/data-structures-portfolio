@@ -2,7 +2,7 @@
 This section documents my data science projects, research questions, and data stories I create throughout the semesters.
 ---
 ## Project 1
-Research Question: How does home-field advantage affect the performance of the Charlotte 49ers football team?
+Research Question: How does home-field advantage affect the performance of the Charlotte 49ers football team in 2025?
 
 Context: Home-field advantage is a well-documented phenomenon in sports, including college football. Previous research has found that college football teams tend to perform better at home, even after accounting for differences in team strength. For example, Wang et al. (2011) estimated a home advantage of approximately six points for home teams after controlling for team ability and other factors. More recent research has continued to find evidence of home-field advantage in American football while showing that its size can vary across levels and time periods.
 
@@ -32,4 +32,78 @@ CFBD's game data includes both teams' pregame Elo ratings, which makes this a us
 
 ### Planned Data Cleaning and Preparation
 
-Data from the College Football Data API was processed using Python and pandas to isolate completed Charlotte 49ers games and eliminate selection bias. To preserve a strict comparison of home versus away performance, neutral-site matchups and records with missing critical values (e.g., scores, location, Elo ratings) were excluded.Feature Engineering & FormattingThe finalized dataset was engineered with the following engineered features to support statistical modeling:is_home: A binary indicator mapping venue designation (\(1\) = Home, \(0\) = Away).win: A binary target outcome variable (\(1\) = Charlotte Victory, \(0\) = Loss).point_differential: Calculated as \(\text{Score}_{\text{Charlotte}} - \text{Score}_{\text{Opponent}}\).elo_differential: The difference between Charlotte’s and their opponent's pregame Elo ratings, serving as a control variable for relative team strength.
+I first used Python to request Charlotte's 2025 game data from the CFBD API. I then converted the API's JSON response into a pandas DataFrame.
+
+I checked the columns and first few rows to understand the data. I also removed games that did not have final scores because those games could not be used to calculate wins or point differential.
+
+Next, I created new variables for game location, Charlotte's points, opponent points, point differential, and win/loss. These variables made the original API data easier to analyze.
+
+I chose point differential because it gives more information than just looking at wins and losses. For example, winning by one point and winning by 30 points are both wins, but point differential shows the difference in how the team performed.
+
+### Visualizations
+
+Visualization 1: Home vs. Away Win Percentage
+
+Type: Bar chart
+
+X-axis: Game Location
+Y-axis: Charlotte Win Percentage (%)
+Bars: Home and Away
+
+Purpose: Directly answers your research question by showing whether Charlotte wins a greater percentage of games at home.
+
+Example description for your writeup:
+
+The first visualization compares Charlotte's winning percentage in home and away games. This graph directly measures the primary outcome of the research question. If Charlotte's home winning percentage is substantially higher than its away winning percentage, this would provide descriptive evidence of a home-field advantage.
+
+Visualization 2: Point Differential by Location and Opponent Strength
+
+Type: Scatter plot
+
+X-axis: Opponent Elo Difference
+Y-axis: Charlotte Point Differential
+Different groups: Home vs. Away
+
+Purpose: Shows whether Charlotte's performance changes based on both location and opponent strength.
+
+Example description:
+
+The second visualization examines the relationship between opponent strength and Charlotte's point differential. By separating home and away games, the visualization helps determine whether Charlotte performs differently depending on where the game is played after accounting for differences in opponent strength.
+
+This is stronger than simply making two graphs that both show home vs. away because it brings your opponent-strength variable into the analysis.
+
+### Ethics and Limitations
+
+There are some limitations to my analysis. First, I am only looking at Charlotte's 2025 games, so one season may not represent how the team normally performs. Charlotte could have had an unusually easy or difficult schedule during this season.
+
+Another limitation is that my current data does not account for the strength of each opponent. If Charlotte played stronger teams away from home, this could make its away record look worse even if location was not the main reason.
+
+There are also other factors that could affect the results, such as injuries, weather, attendance, coaching, travel, and the quality of the team during that season.
+
+Because of these limitations, my analysis can show a relationship between location and performance, but it cannot prove that playing at home directly causes Charlotte to perform better.
+
+### Code and AI Transparency
+#### Code Transparency
+
+I used Python, pandas, Matplotlib, and the College Football Data API for this project. My complete code will be included in my Jupyter Notebook or GitHub repository so that the data cleaning and graphs can be viewed.
+
+#### AI Usage Disclosure
+
+I used ChatGPT to help me understand Python code, organize my project, and create ideas for my visualizations and written explanations. I reviewed the code and made sure I understood how it worked. I am responsible for checking the results and finalizing the analysis.
+
+### Code Review
+
+I will have my code reviewed by an instructor or TA. I will ask them to look at my API code, data cleaning, variables, and visualizations. I will make any necessary changes based on their feedback.
+
+### Academic References
+
+Wang, W., Johnston, R., & Jones, K. (2011). Home advantage in American college football games: A multilevel modelling approach. Journal of Quantitative Analysis in Sports, 7(3). https://doi.org/10.2202/1559-0410.1328
+
+Fullagar, H. H. K., Delaney, J., Duffield, R., & Murray, A. (2019). Factors influencing home advantage in American collegiate football. Science and Medicine in Football, 3(2), 163–168. https://doi.org/10.1080/24733938.2018.1524581
+
+Pollard, R., & Gómez, M. A. (2015). Comparison of home advantage in college and professional team sports in the United States. Collegium Antropologicum, 39(3), 583–589.
+
+### Simple Overall Project Summary
+
+My research question is: **How does home-field advantage affect the performance of the Charlotte 49ers football team in 2025?** I will use 2025 Charlotte football data from the College Football Data API to compare the team's performance in home and away games. My main variables are game location, wins and losses, Charlotte's points, opponent points, and point differential. I will use two graphs to compare home and away performance. The first graph will show Charlotte's win percentage at home versus away, while the second will compare average point differential. The goal is to determine whether Charlotte performs better when playing at home.
+
