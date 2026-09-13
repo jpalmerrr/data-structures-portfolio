@@ -44,6 +44,8 @@ I chose point differential because it gives more information than just looking a
 
 Visualization 1: Home vs. Away Win Percentage
 
+<img width="702" height="474" alt="Screenshot 2026-09-13 at 4 31 30 PM" src="https://github.com/user-attachments/assets/4fc8e103-3940-4409-8dba-4ccf6017d91a" />
+
 Type: Bar chart
 
 X-axis: Game Location
@@ -57,6 +59,8 @@ Example description for your writeup:
 The first visualization compares Charlotte's winning percentage in home and away games. This graph directly measures the primary outcome of the research question. If Charlotte's home winning percentage is substantially higher than its away winning percentage, this would provide descriptive evidence of a home-field advantage.
 
 Visualization 2: Point Differential by Location and Opponent Strength
+
+<img width="708" height="475" alt="Screenshot 2026-09-13 at 4 31 56 PM" src="https://github.com/user-attachments/assets/9cda3b31-a371-4ec1-a56b-2e5d9afaf5a7" />
 
 Type: Scatter plot
 
