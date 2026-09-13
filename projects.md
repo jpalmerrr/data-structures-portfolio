@@ -111,6 +111,6 @@ Pollard, R., & Gómez, M. A. (2015). Comparison of home advantage in college and
 
 My research question is: **How does home-field advantage affect the performance of the Charlotte 49ers football team in 2025?** I will use 2025 Charlotte football data from the College Football Data API to compare the team's performance in home and away games. My main variables are game location, wins and losses, Charlotte's points, opponent points, and point differential. I will use two graphs to compare home and away performance. The first graph will show Charlotte's win percentage at home versus away, while the second will compare average point differential. The goal is to determine whether Charlotte performs better when playing at home.
 
-Click [HERE](file:///Users/joshpalmer/Downloads/Studio2_Project1_Code.html) to access my code for this project.
+Click [HERE](file:///Users/joshpalmer/Downloads/Studio2_Project1_Code.pdf) to access my code for this project.
 
 Click [HERE](https://github.com/jpalmerrr/data-structures-portfolio) to access my GitHub for this project.
