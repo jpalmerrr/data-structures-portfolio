@@ -687,6 +687,6 @@ I reviewed the generated material and made the final decisions regarding my rese
 
 Click [HERE](code2.md) to access my code for this project.
 
-Click [HERE]() to access the visuals for this project.
+Click [HERE](visuals2.md) to access the visuals for this project.
 
 Click [HERE](https://github.com/jpalmerrr/data-structures-portfolio) to access my GitHub for this project.
