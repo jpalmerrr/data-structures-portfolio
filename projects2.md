@@ -562,7 +562,7 @@ Yurko, R., Ventura, S., & Horowitz, M. (2018). *nflWAR: A reproducible method fo
 
 # AI Usage Disclosure
 
-I used **OpenAI ChatGPT (GPT-5.6)** as a support tool during this project. I used ChatGPT to help brainstorm and refine the research question, identify relevant variables, organize the project structure, explain machine-learning concepts, assist with Python code development and troubleshooting, and improve the clarity of written explanations.
+I used **ChatGPT** as a support tool during this project. I used ChatGPT to help brainstorm and refine the research question, identify relevant variables, organize the project structure, explain machine-learning concepts, assist with Python code development and troubleshooting, and improve the clarity of written explanations.
 
 I reviewed the generated material and made the final decisions regarding my research question, feature selection, data preparation, modeling strategy, model evaluation, and interpretation. Final numerical results and conclusions will be based on the output of my own Python analysis rather than generated or assumed results.
 
