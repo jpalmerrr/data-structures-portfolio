@@ -685,6 +685,6 @@ I used **OpenAI ChatGPT (GPT-5.6)** as a support tool during this project. I use
 
 I reviewed the generated material and made the final decisions regarding my research question, feature selection, data preparation, modeling strategy, model evaluation, and interpretation. Final numerical results and conclusions will be based on the output of my own Python analysis rather than generated or assumed results.
 
-Click [HERE]() to access my code for this project.
+Click [HERE](code2.md) to access my code for this project.
 
 Click [HERE](https://github.com/jpalmerrr/data-structures-portfolio) to access my GitHub for this project.
